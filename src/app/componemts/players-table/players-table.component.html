@@ -1,0 +1,50 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Nbr</th>
+        <th scope="col">Position</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elet of playersTab">
+        <td>{{elet._id}}</td>
+        <td>{{elet.name}}</td>
+        <td>{{elet.age}}</td>
+        <td>{{elet.nbr}}</td>
+        <td>{{elet.position}}</td>
+        <td>
+            <button type="button" class="btn btn-success m-1"(click)='goToDisplay(elet._id)'>Display</button>
+            <button type="button" class="btn btn-info m-1"(click)="editPlayer(elet._id)">Edit</button>
+            <button type="button" class="btn btn-danger m-1"(click)="deletePlayer(elet._id)">Delete</button>
+        </td>
+      </tr>
+      <!-- <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <button type="button" class="btn btn-success m-1">Display</button>
+            <button type="button" class="btn btn-info m-1">Edit</button>
+            <button type="button" class="btn btn-danger m-1">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <button type="button" class="btn btn-success m-1">Display</button>
+            <button type="button" class="btn btn-info m-1">Edit</button>
+            <button type="button" class="btn btn-danger m-1">Delete</button>
+        </td>
+      </tr> -->
+    </tbody>
+  </table>

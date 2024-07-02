@@ -1,0 +1,25 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">{{title|reverse |star}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<ul class="nav nav-tabs " id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="Matches-tab" data-toggle="tab" href="#Matches" role="tab" aria-controls="Matches" aria-selected="true">Matches</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="Teams-tab" data-toggle="tab" href="#Teams" role="tab" aria-controls="Teams" aria-selected="false">Teams</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="Players-tab" data-toggle="tab" href="#Players" role="tab" aria-controls="Players" aria-selected="false">Players</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="Matches" role="tabpanel" aria-labelledby="Matches-tab"><app-matches-table></app-matches-table></div>
+    <div class="tab-pane fade" id="Teams" role="tabpanel" aria-labelledby="Teams-tab"><app-teams-table></app-teams-table></div>
+    <div class="tab-pane fade" id="Players" role="tabpanel" aria-labelledby="Players-tab"><app-players-table></app-players-table></div>
+  </div>

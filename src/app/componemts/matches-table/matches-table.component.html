@@ -1,0 +1,52 @@
+<table class="table ">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Score One</th>
+        <th scope="col">Score Two</th>
+        <th scope="col">Team One</th>
+        <th scope="col">Team Two</th>
+        <th scope="col">Result</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let elet of matchTab">
+        <td >{{elet._id}}</td>
+        <td>{{elet.scoreOne}}</td>
+        <td>{{elet.scoreTwo}}</td>
+        <td>{{elet.teamOne}}</td>
+        <td>{{elet.teamTwo}}</td>
+        <td [ngStyle]="{color:result(elet.scoreOne,elet.scoreTwo,elet.teamOne)[1]}">{{result(elet.scoreOne,elet.scoreTwo,elet.teamOne)[0]}}</td>
+        <td>
+            <button type="button" class="btn btn-success m-1" (click)="goToInfo(elet._id)">Display</button>
+            <button type="button" class="btn btn-info m-1"(click)='editMatch(elet._id)'>Edit</button>
+            <button type="button" class="btn btn-danger m-1" (click)="deleteMatch(elet._id)">Delete</button>
+        </td>
+      </tr>
+      <!-- <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <button type="button" class="btn btn-success m-1">Display</button>
+            <button type="button" class="btn btn-info m-1">Edit</button>
+            <button type="button" class="btn btn-danger m-1">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <th scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+            <button type="button" class="btn btn-success m-1">Display</button>
+            <button type="button" class="btn btn-info m-1">Edit</button>
+            <button type="button" class="btn btn-danger m-1">Delete</button>
+        </td>
+      </tr> -->
+    </tbody>
+  </table>
